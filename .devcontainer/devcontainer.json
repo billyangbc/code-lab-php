@@ -12,14 +12,47 @@
 
 	// The 'service' property is the name of the service for the container that VS Code should
 	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
-	"service": "web",
+	"service": "php",
 
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/workspaces/code-lab-php/"
+	"workspaceFolder": "/workspaces/code-lab-php/",
 
+    "customizations": {
+        "vscode": {
+            // code --list-extensions | xargs -L 1 echo code --install-extension
+            "extensions": [
+                "donjayamanne.githistory",
+                "eamodio.gitlens",
+                "mechatroner.rainbow-csv",
+                "ms-azuretools.vscode-docker",
+                "redhat.vscode-yaml",
+                "tomoki1207.pdf",
+                "VisualStudioExptTeam.intellicode-api-usage-examples",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "vscodevim.vim",
+                "yzhang.markdown-all-in-one",
+                "ms-vscode.makefile-tools",
+                "DEVSENSE.composer-php-vscode",
+                "DEVSENSE.phptools-vscode",
+                "DEVSENSE.profiler-php-vscode",
+//                "xdebug.php-debug",
+//               "xdebug.php-pack",
+                "bmewburn.vscode-intelephense-client"
+            ],
+            "settings": {
+            }
+        }
+    },
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true
+        }
+    },
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	//"forwardPorts": [8080, 3306],
@@ -37,5 +70,5 @@
 	// "customizations": {},
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "devcontainer"
+	"remoteUser": "devcontainer"
 }

@@ -8,7 +8,9 @@ RUN apt-get install -y --no-install-recommends \
     libmagickwand-dev \
     libpng-dev \
     libwebp-dev \
-    libzip-dev
+    libzip-dev \
+    git \
+    vim
 
 RUN docker-php-ext-install -j "$(nproc)" \ 
     pdo \
