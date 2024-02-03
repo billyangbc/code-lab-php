@@ -3,6 +3,10 @@
 {
 	"name": "Code-Lab-PHP",
 
+	// The optional 'workspaceFolder' property is the path VS Code should open by default when
+	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
 	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
 	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
 	"dockerComposeFile": [
@@ -14,37 +18,6 @@
 	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
 	"service": "php",
 
-	// The optional 'workspaceFolder' property is the path VS Code should open by default when
-	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-
-    "customizations": {
-        "vscode": {
-            // code --list-extensions | xargs -L 1 echo code --install-extension
-            "extensions": [
-                "cweijan.vscode-typora",
-                "donjayamanne.githistory",
-                "eamodio.gitlens",
-                "mechatroner.rainbow-csv",
-                "ms-azuretools.vscode-docker",
-                "redhat.vscode-yaml",
-                "tomoki1207.pdf",
-                "VisualStudioExptTeam.intellicode-api-usage-examples",
-                "VisualStudioExptTeam.vscodeintellicode",
-                "vscodevim.vim",
-//                "yzhang.markdown-all-in-one",
-//                "ms-vscode.makefile-tools",
-                "DEVSENSE.composer-php-vscode",
-                "DEVSENSE.phptools-vscode",
-                "DEVSENSE.profiler-php-vscode",
-                "xdebug.php-debug",
-                "xdebug.php-pack",
-                "bmewburn.vscode-intelephense-client"
-            ],
-            "settings": {
-            }
-        }
-    },
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
     "features": {
@@ -68,8 +41,35 @@
 	// "postCreateCommand": "cat /etc/os-release",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+    "customizations": {
+        "vscode": {
+            // code --list-extensions | xargs -L 1 echo code --install-extension
+            "extensions": [
+                "donjayamanne.githistory",
+                "eamodio.gitlens",
+                "mechatroner.rainbow-csv",
+                "ms-azuretools.vscode-docker",
+                "ms-vscode.makefile-tools",
+                "redhat.vscode-yaml",
+                "tomoki1207.pdf",
+                "VisualStudioExptTeam.intellicode-api-usage-examples",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "vscodevim.vim",
+                //"yzhang.markdown-all-in-one",
+                "cweijan.vscode-typora", // another markdown extension
+                "DEVSENSE.composer-php-vscode",
+                // php extensions
+                "bmewburn.vscode-intelephense-client",
+                "DEVSENSE.phptools-vscode",
+                "DEVSENSE.profiler-php-vscode",
+                "xdebug.php-debug",
+                "xdebug.php-pack"
+            ],
+            "settings": {
+            }
+        }
+    }
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "devcontainer"
+	//"remoteUser": "devcontainer"
 }
