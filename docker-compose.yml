@@ -24,9 +24,9 @@ services:
         image: mariadb:latest
         environment:
             MYSQL_ROOT_PASSWORD: 'secret'
-            MYSQL_USER: 'codelab'
+            MYSQL_USER: 'dev'
             MYSQL_PASSWORD: 'secret'
-            MYSQL_DATABASE: 'codelab'
+            MYSQL_DATABASE: 'dev'
         volumes:
             - dbdata:/var/lib/mysql
         ports:
