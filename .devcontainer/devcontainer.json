@@ -16,7 +16,7 @@
 
 	// The 'service' property is the name of the service for the container that VS Code should
 	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
-	"service": "web",
+	"service": "php",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -68,8 +68,8 @@
             "settings": {
             }
         }
-    }
+    },
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	//"remoteUser": "devcontainer"
+    "remoteUser": "vscode"
 }
